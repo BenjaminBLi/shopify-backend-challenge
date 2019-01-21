@@ -10,5 +10,6 @@ class Item(models.Model):
     inventory_count = models.IntegerField()
     genre = models.TextField()
 
+
 class Purchase(models.Model):
     item = models.ForeignKey('products.Item', related_name='purchases', on_delete=models.CASCADE, null=True, )
